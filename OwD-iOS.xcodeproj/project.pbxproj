@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C24920212DE1199B007EF67F /* SwiftQRCodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = C24920202DE1199B007EF67F /* SwiftQRCodeScanner */; };
+		C2835F062DE0D09100FA07D1 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C2835F052DE0D09100FA07D1 /* KakaoSDKAuth */; };
+		C2835F082DE0D09100FA07D1 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = C2835F072DE0D09100FA07D1 /* KakaoSDKCommon */; };
+		C2835F0A2DE0D09100FA07D1 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = C2835F092DE0D09100FA07D1 /* KakaoSDKUser */; };
+		C2835F0F2DE0D74600FA07D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C2835F0E2DE0D74600FA07D1 /* SnapKit */; };
+		C2835F822DE1094300FA07D1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C2835F812DE1094300FA07D1 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C2835D9B2DE0C6CC00FA07D1 /* OwD-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OwD-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2835F082DE0D09100FA07D1 /* KakaoSDKCommon in Frameworks */,
+				C24920212DE1199B007EF67F /* SwiftQRCodeScanner in Frameworks */,
+				C2835F0F2DE0D74600FA07D1 /* SnapKit in Frameworks */,
+				C2835F062DE0D09100FA07D1 /* KakaoSDKAuth in Frameworks */,
+				C2835F822DE1094300FA07D1 /* FirebaseStorage in Frameworks */,
+				C2835F0A2DE0D09100FA07D1 /* KakaoSDKUser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,12 @@
 			);
 			name = "OwD-iOS";
 			packageProductDependencies = (
+				C2835F052DE0D09100FA07D1 /* KakaoSDKAuth */,
+				C2835F072DE0D09100FA07D1 /* KakaoSDKCommon */,
+				C2835F092DE0D09100FA07D1 /* KakaoSDKUser */,
+				C2835F0E2DE0D74600FA07D1 /* SnapKit */,
+				C2835F812DE1094300FA07D1 /* FirebaseStorage */,
+				C24920202DE1199B007EF67F /* SwiftQRCodeScanner */,
 			);
 			productName = "OwD-iOS";
 			productReference = C2835D9B2DE0C6CC00FA07D1 /* OwD-iOS.app */;
@@ -107,6 +128,12 @@
 			);
 			mainGroup = C2835D922DE0C6CC00FA07D1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C2835F042DE0D09100FA07D1 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				C2835F0D2DE0D74600FA07D1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C2835F802DE1094300FA07D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C249201F2DE1199B007EF67F /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C2835D9C2DE0C6CC00FA07D1 /* Products */;
 			projectDirPath = "";
@@ -148,16 +175,20 @@
 				DEVELOPMENT_TEAM = 4C5QZ5DXV6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OwD-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "QR 인증을 위해 카메라 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "가게들과의 거리를 파악하기 위해 사용자 위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "가게들과의 거리를 파악하기 위해 사용자 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.harrylee.OwD-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OwD.OwD-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -175,16 +206,20 @@
 				DEVELOPMENT_TEAM = 4C5QZ5DXV6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OwD-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "QR 인증을 위해 카메라 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "가게들과의 거리를 파악하기 위해 사용자 위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "가게들과의 거리를 파악하기 위해 사용자 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.harrylee.OwD-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OwD.OwD-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -335,6 +370,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C249201F2DE1199B007EF67F /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vinodiOS/SwiftQRCodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.6;
+			};
+		};
+		C2835F042DE0D09100FA07D1 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.24.2;
+			};
+		};
+		C2835F0D2DE0D74600FA07D1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		C2835F802DE1094300FA07D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C24920202DE1199B007EF67F /* SwiftQRCodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C249201F2DE1199B007EF67F /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */;
+			productName = SwiftQRCodeScanner;
+		};
+		C2835F052DE0D09100FA07D1 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2835F042DE0D09100FA07D1 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		C2835F072DE0D09100FA07D1 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2835F042DE0D09100FA07D1 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		C2835F092DE0D09100FA07D1 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2835F042DE0D09100FA07D1 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		C2835F0E2DE0D74600FA07D1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2835F0D2DE0D74600FA07D1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C2835F812DE1094300FA07D1 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2835F802DE1094300FA07D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2835D932DE0C6CC00FA07D1 /* Project object */;
 }

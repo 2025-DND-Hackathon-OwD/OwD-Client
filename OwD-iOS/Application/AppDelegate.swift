@@ -6,16 +6,20 @@
 //
 
 import UIKit
+import KakaoSDKCommon
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        KakaoSDK.initSDK(appKey: "bcf7b260c5591d6e43464d2f20d718b5")
+        
+        FirebaseApp.configure()
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
